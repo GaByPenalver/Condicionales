@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Desafio 2</title>
+</head>
+
+<body>
+    <h3>Puedes llevar hasta 10 stickers en total</h3>
+    <div class="container">
+
+        <article class="image-wrapper1">
+            <img src="assets/img/Desafio2a.jpg" alt="Hey Arnold">
+            <input type="number" id="box1" placeholder="Cantidad">
+        </article>
+
+        <article class="image-wrapper2">
+            <img src="assets/img/Desafio2b.jpg" alt="Las chicas super poderosas">
+            <input type="number" id="box2" placeholder="Cantidad">
+        </article>
+
+        <article class="image-wrapper3">
+            <img src="assets/img/Desafio2c.jpg" alt="Laboratorio de Dexter">
+            <input type="number" id="box3" placeholder="Cantidad">
+        </article>
+
+    </div>
+    <p id="cantidad"></p>
+
+    <div class="button">
+        <button onclick="
+            box1 = document.querySelector('#box1').value;
+            box2 = document.querySelector('#box2').value;
+            box3 = document.querySelector('#box3').value;
+            
+            total = (Number(box1) + Number(box2) + Number(box3));
+            cantidad = document.querySelector('#cantidad');
+            if(Number(total) == 10){
+                cantidad.innerHTML = 'Llevas la cantida máxima de stickers';
+            }else if(total <= 10){
+                cantidad.innerHTML = 'Llevas ' + total + ' stickers';
+            }else{
+                cantidad.innerHTML = 'Llevas demasiados stickers';
+            }
+        ">Verificar</button>
+    </div>
+
+
+
+
+
+    <a href="index3.html"><button>Ir al Desafío 3</button></a>
+    <script src="assets/main.js"></script>
+</body>
+
+</html>
